@@ -34,7 +34,49 @@ public class Even$Odd {
 
       int BitMask = ~(1 << i);
       return n & BitMask;
+    } 
+
+
+    public static int UpdateIbit(int n, int i, int value) {
+       n = ClearIthBit(n, i);
+       int BitMask = value<<i;
+       return n | BitMask;
+
     }
+
+
+    public static int ClearBitInRange(int i , int j , int , n)
+    {
+        int a = ((~0)<<(j+1));
+        int b = ((1)<<i)-1;
+        return n& (a|b);
+    }
+
+
+    public static boolean IsPower(int n)
+    {
+        return (n & (n-1)) == 0;
+    }
+
+
+    public static int CoutSetBit(int n)
+    {
+        int cout =0;
+
+        while(n>0)
+        {
+            if((n & 1) != 0)
+            {
+                cout++;
+            }
+
+           n =n>>1;
+        }
+
+        return cout;
+    }
+
+
 
     public static void main(String[] args) {
 
